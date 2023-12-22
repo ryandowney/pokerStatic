@@ -1,0 +1,13 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of accordionItems">
+    <mat-expansion-panel-header>
+      {{ item.title }}
+      <a href="{{ item.link }}" target="_blank">{{ item.link }}</a>
+    </mat-expansion-panel-header>
+    <ng-container *ngFor="let contentItem of item.content">
+      <p>
+        <a href="{{ contentItem }}" target="_blank">{{ contentItem }}</a>
+      </p>
+    </ng-container>
+  </mat-expansion-panel>
+</mat-accordion>
